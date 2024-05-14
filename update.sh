@@ -2,6 +2,7 @@
 
 cd `dirname $0`
 
+git config --global credential.helper store --file ~/.git-credentials-ch32-riscv-ug
 git pull
 
 cd datasheet_en
