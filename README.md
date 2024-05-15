@@ -144,7 +144,7 @@
 </table>
 
 ## Pin Definitions
-<table>
+<table width="100%">
     <thead>
         <tr>
             <th colspan="3"><br>Pin No.</th>
