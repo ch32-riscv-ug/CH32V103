@@ -5,6 +5,10 @@
 # System Block Diagram
 <img src="image/system.png" />
 
+
+# System Architecture
+<img src="image/architecture.png" />
+
 # Comparison
 <table>
     <thead>
@@ -135,12 +139,12 @@
 <table>
     <thead>
         <tr>
-            <th colspan="3">Pin No.</th>
+            <th colspan="3"><br>Pin No.</th>
             <th rowspan="2">Pin Name</th>
-            <th rowspan="2">Pin Type (1)</th>
-            <th rowspan="2">Main function (after reset)</th>
-            <th rowspan="2">Default alternate function</th>
-            <th rowspan="2">Remapping function (2)</th>
+            <th rowspan="2">PinType (1)</th>
+            <th rowspan="2">Mainfunction (after reset)</th>
+            <th rowspan="2">Defaultalternate function</th>
+            <th rowspan="2">Remapping function(2)</th>
         </tr>
         <tr>
             <th>LQFP48</th>
@@ -149,136 +153,6 @@
         </tr>
     </thead>
     <tbody align="center">
-        <tr>
-            <td>1</td>
-            <td>1</td>
-            <td>1</td>
-            <td>VBAT</td>
-            <td>P</td>
-            <td>VBAT</td>
-            <td></td>
-            <td></td>
-        </tr>
-        <tr>
-            <td>2</td>
-            <td>2</td>
-            <td>2</td>
-            <td>PC13-TAMPER RTC(3)</td>
-            <td>I/O</td>
-            <td>PC13</td>
-            <td>TAMPER-RTC</td>
-            <td></td>
-        </tr>
-        <tr>
-            <td>3</td>
-            <td>3</td>
-            <td>3</td>
-            <td>PC14-OSC32_IN(3)</td>
-            <td>I/O/A</td>
-            <td>PC14</td>
-            <td>OSC32_IN</td>
-            <td></td>
-        </tr>
-        <tr>
-            <td>4</td>
-            <td>4</td>
-            <td>4</td>
-            <td>PC15-OSC32_OUT(3)</td>
-            <td>I/O/A</td>
-            <td>PC15</td>
-            <td>OSC32_OUT</td>
-            <td></td>
-        </tr>
-        <tr>
-            <td>5</td>
-            <td>5</td>
-            <td>5</td>
-            <td>OSC_IN</td>
-            <td>I/<br>A</td>
-            <td>OSC_IN</td>
-            <td></td>
-            <td>PD0(4)</td>
-        </tr>
-        <tr>
-            <td>6</td>
-            <td>6</td>
-            <td>6</td>
-            <td>OSC_OUT</td>
-            <td>O/A</td>
-            <td>OSC_OUT</td>
-            <td></td>
-            <td>PD1(4)</td>
-        </tr>
-        <tr>
-            <td>7</td>
-            <td>7</td>
-            <td>7</td>
-            <td>NRST</td>
-            <td>I/O</td>
-            <td>NRST</td>
-            <td></td>
-            <td></td>
-        </tr>
-        <tr>
-            <td>-</td>
-            <td>-</td>
-            <td>8</td>
-            <td>PC0</td>
-            <td>I/O/A</td>
-            <td>PC0</td>
-            <td>ADC_IN10</td>
-            <td></td>
-        </tr>
-        <tr>
-            <td>-</td>
-            <td>-</td>
-            <td>9</td>
-            <td>PC1</td>
-            <td>I/O/A</td>
-            <td>PC1</td>
-            <td>ADC_IN11</td>
-            <td></td>
-        </tr>
-        <tr>
-            <td>-</td>
-            <td>-</td>
-            <td>10</td>
-            <td>PC2</td>
-            <td>I/O/A</td>
-            <td>PC2</td>
-            <td>ADC_IN12</td>
-            <td></td>
-        </tr>
-        <tr>
-            <td>-</td>
-            <td>-</td>
-            <td>11</td>
-            <td>PC3</td>
-            <td>I/O/A</td>
-            <td>PC3</td>
-            <td>ADC_IN13</td>
-            <td></td>
-        </tr>
-        <tr>
-            <td>8</td>
-            <td>8</td>
-            <td>12</td>
-            <td>VSSA</td>
-            <td>P</td>
-            <td>VSSA</td>
-            <td></td>
-            <td></td>
-        </tr>
-        <tr>
-            <td>9</td>
-            <td>9</td>
-            <td>13</td>
-            <td>VDDA</td>
-            <td>P</td>
-            <td>VDDA</td>
-            <td></td>
-            <td></td>
-        </tr>
         <tr>
             <td>10</td>
             <td>10</td>
@@ -316,27 +190,7 @@
             <td>PA3</td>
             <td>I/O/A</td>
             <td>PA3</td>
-            <td>USART2_RX/<br>ADC_IN3/<br>TIM2_CH4</td>
-            <td></td>
-        </tr>
-        <tr>
-            <td>-</td>
-            <td>-</td>
-            <td>18</td>
-            <td>VSS_4</td>
-            <td>P</td>
-            <td>VSS_4</td>
-            <td></td>
-            <td></td>
-        </tr>
-        <tr>
-            <td>-</td>
-            <td>-</td>
-            <td>19</td>
-            <td>VDD_4</td>
-            <td>P</td>
-            <td>VDD_4</td>
-            <td></td>
+            <td>USART2_RX/<br>ADC_IN3/<br> TIM2_CH4</td>
             <td></td>
         </tr>
         <tr>
@@ -370,7 +224,7 @@
             <td>TIM1_BKIN_1</td>
         </tr>
         <tr>
-            <td>17</td>
+            <td><br>17</td>
             <td>17</td>
             <td>23</td>
             <td>PA7</td>
@@ -378,176 +232,6 @@
             <td>PA7</td>
             <td>SPI1_MOSI/<br>ADC_IN7/<br>TIM3_CH2</td>
             <td>TIM1_CH1N_1</td>
-        </tr>
-        <tr>
-            <td>-</td>
-            <td>-</td>
-            <td>24</td>
-            <td>PC4</td>
-            <td>I/O/A</td>
-            <td>PC4</td>
-            <td>ADC_IN14</td>
-            <td></td>
-        </tr>
-        <tr>
-            <td>-</td>
-            <td>-</td>
-            <td>25</td>
-            <td>PC5</td>
-            <td>I/O/A</td>
-            <td>PC5</td>
-            <td>ADC_IN15</td>
-            <td></td>
-        </tr>
-        <tr>
-            <td>18</td>
-            <td>18</td>
-            <td>26</td>
-            <td>PB0</td>
-            <td>I/O/A</td>
-            <td>PB0</td>
-            <td>ADC_IN8/<br>TIM3_CH3</td>
-            <td>TIM1_CH2N_1</td>
-        </tr>
-        <tr>
-            <td>19</td>
-            <td>19</td>
-            <td>27</td>
-            <td>PB1</td>
-            <td>I/O/A</td>
-            <td>PB1</td>
-            <td>ADC_IN9/<br>TIM3_CH4</td>
-            <td>TIM1_CH3N_1</td>
-        </tr>
-        <tr>
-            <td>20</td>
-            <td>20</td>
-            <td>28</td>
-            <td>PB2</td>
-            <td>I/O</td>
-            <td>PB2/<br>BOOT1</td>
-            <td></td>
-            <td></td>
-        </tr>
-        <tr>
-            <td>21</td>
-            <td>21</td>
-            <td>29</td>
-            <td>PB10</td>
-            <td>I/O</td>
-            <td>PB10</td>
-            <td>I2C2_SCL/<br>USART3_TX</td>
-            <td>TIM2_CH3_1</td>
-        </tr>
-        <tr>
-            <td>22</td>
-            <td>22</td>
-            <td>30</td>
-            <td>PB11</td>
-            <td>I/O</td>
-            <td>PB11</td>
-            <td>I2C2_SDA/<br>USART3_RX</td>
-            <td>TIM2_CH4_1</td>
-        </tr>
-        <tr>
-            <td>23</td>
-            <td>23</td>
-            <td>31</td>
-            <td>VSS_1</td>
-            <td>P</td>
-            <td>VSS_1</td>
-            <td></td>
-            <td></td>
-        </tr>
-        <tr>
-            <td>24</td>
-            <td>24</td>
-            <td>32</td>
-            <td>VDD_1</td>
-            <td>P</td>
-            <td>VDD_1</td>
-            <td></td>
-            <td></td>
-        </tr>
-        <tr>
-            <td>25</td>
-            <td>25</td>
-            <td>33</td>
-            <td>PB12</td>
-            <td>I/O</td>
-            <td>PB12</td>
-            <td>SPI2_NSS/<br>I2C2_SMBAI/<br>USART3_CK/<br>TIM1_BKIN</td>
-            <td></td>
-        </tr>
-        <tr>
-            <td>26</td>
-            <td>26</td>
-            <td>34</td>
-            <td>PB13</td>
-            <td>I/O</td>
-            <td>PB13</td>
-            <td>SPI2_SCK/<br>USART3_CTS/<br>TIM1_CH1N</td>
-            <td></td>
-        </tr>
-        <tr>
-            <td>27</td>
-            <td>27</td>
-            <td>35</td>
-            <td>PB14</td>
-            <td>I/O</td>
-            <td>PB14</td>
-            <td>SPI2_MISO/<br>USART3_RTS/<br>TIM1_CH2N</td>
-            <td></td>
-        </tr>
-        <tr>
-            <td>28</td>
-            <td>28</td>
-            <td>36</td>
-            <td>PB15</td>
-            <td>I/O</td>
-            <td>PB15</td>
-            <td>SPI2_MOSI/<br>TIM1_CH3N</td>
-            <td></td>
-        </tr>
-        <tr>
-            <td>-</td>
-            <td>-</td>
-            <td>37</td>
-            <td>PC6</td>
-            <td>I/O</td>
-            <td>PC6</td>
-            <td></td>
-            <td>TIM3_CH1_1</td>
-        </tr>
-        <tr>
-            <td>-</td>
-            <td>-</td>
-            <td>38</td>
-            <td>PC7</td>
-            <td>I/O</td>
-            <td>PC7</td>
-            <td></td>
-            <td>TIM3_CH2_1</td>
-        </tr>
-        <tr>
-            <td>-</td>
-            <td>-</td>
-            <td>39</td>
-            <td>PC8</td>
-            <td>I/O</td>
-            <td>PC8</td>
-            <td></td>
-            <td>TIM3_CH3_1</td>
-        </tr>
-        <tr>
-            <td>-</td>
-            <td>-</td>
-            <td>40</td>
-            <td>PC9</td>
-            <td>I/O</td>
-            <td>PC9</td>
-            <td></td>
-            <td>TIM3_CH4_1</td>
         </tr>
         <tr>
             <td>29</td>
@@ -610,26 +294,6 @@
             <td>PA13(5)</td>
         </tr>
         <tr>
-            <td>35</td>
-            <td>35</td>
-            <td>47</td>
-            <td>VSS_2</td>
-            <td>P</td>
-            <td>VSS_2</td>
-            <td></td>
-            <td></td>
-        </tr>
-        <tr>
-            <td>36</td>
-            <td>36</td>
-            <td>48</td>
-            <td>VDD_2</td>
-            <td>P</td>
-            <td>VDD_2</td>
-            <td></td>
-            <td></td>
-        </tr>
-        <tr>
             <td>37</td>
             <td>37</td>
             <td>49</td>
@@ -647,7 +311,267 @@
             <td>I/O</td>
             <td>PA15</td>
             <td></td>
-            <td>TIM2_CH1_1/<br>TIM2_ETR_1/<br>SPI1_NSS_1</td>
+            <td>TIM2_CH1_1/<br> TIM2_ETR_1/<br> SPI1_NSS_1</td>
+        </tr>
+        <tr>
+            <td>18</td>
+            <td>18</td>
+            <td>26</td>
+            <td>PB0</td>
+            <td>I/O/A</td>
+            <td>PB0</td>
+            <td>ADC_IN8/<br>TIM3_CH3</td>
+            <td>TIM1_CH2N_1</td>
+        </tr>
+        <tr>
+            <td>19</td>
+            <td>19</td>
+            <td>27</td>
+            <td>PB1</td>
+            <td>I/O/A</td>
+            <td>PB1</td>
+            <td>ADC_IN9/<br>TIM3_CH4</td>
+            <td>TIM1_CH3N_1</td>
+        </tr>
+        <tr>
+            <td>20</td>
+            <td>20</td>
+            <td>28</td>
+            <td>PB2</td>
+            <td>I/O</td>
+            <td>PB2/BOOT1</td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>39</td>
+            <td>39</td>
+            <td>55</td>
+            <td>PB3</td>
+            <td>I/O</td>
+            <td>PB3</td>
+            <td></td>
+            <td>TIM2_CH2_1/<br>SPI1_SCK_1</td>
+        </tr>
+        <tr>
+            <td>40</td>
+            <td>40</td>
+            <td>56</td>
+            <td>PB4</td>
+            <td>I/O</td>
+            <td>PB4</td>
+            <td></td>
+            <td>TIM3_CH1_1/<br>SPI1_MISO_1</td>
+        </tr>
+        <tr>
+            <td><br>41</td>
+            <td>41</td>
+            <td>57</td>
+            <td>PB5</td>
+            <td>I/O</td>
+            <td>PB5</td>
+            <td>I2C1_SMBAI</td>
+            <td>TIM3_CH2_1/<br>SPI1_MOSI_1</td>
+        </tr>
+        <tr>
+            <td>42</td>
+            <td>42</td>
+            <td>58</td>
+            <td>PB6</td>
+            <td>I/O/A</td>
+            <td>PB6</td>
+            <td>I2C1_SCL/<br>TIM4_CH1</td>
+            <td>USART1_TX_1</td>
+        </tr>
+        <tr>
+            <td>43</td>
+            <td>43</td>
+            <td>59</td>
+            <td>PB7</td>
+            <td>I/O/A</td>
+            <td>PB7</td>
+            <td>I2C1_SDA/<br>TIM4_CH2</td>
+            <td>USART1_RX_1</td>
+        </tr>
+        <tr>
+            <td>45</td>
+            <td>45</td>
+            <td>61</td>
+            <td>PB8</td>
+            <td>I/O/A</td>
+            <td>PB8</td>
+            <td>TIM4_CH3</td>
+            <td>I2C1_SCL_1</td>
+        </tr>
+        <tr>
+            <td>46</td>
+            <td>46</td>
+            <td>62</td>
+            <td>PB9</td>
+            <td>I/O/A</td>
+            <td>PB9</td>
+            <td>TIM4_CH4</td>
+            <td>I2C1_SDA_1</td>
+        </tr>
+        <tr>
+            <td>21</td>
+            <td>21</td>
+            <td>29</td>
+            <td>PB10</td>
+            <td>I/O</td>
+            <td>PB10</td>
+            <td>I2C2_SCL/<br>USART3_TX</td>
+            <td>TIM2_CH3_1</td>
+        </tr>
+        <tr>
+            <td>22</td>
+            <td>22</td>
+            <td>30</td>
+            <td>PB11</td>
+            <td>I/O</td>
+            <td>PB11</td>
+            <td>I2C2_SDA/<br>USART3_RX</td>
+            <td>TIM2_CH4_1</td>
+        </tr>
+        <tr>
+            <td>25</td>
+            <td>25</td>
+            <td>33</td>
+            <td>PB12</td>
+            <td>I/O</td>
+            <td>PB12</td>
+            <td>SPI2_NSS/<br>I2C2_SMBAI/<br>USART3_CK/<br>TIM1_BKIN</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>26</td>
+            <td>26</td>
+            <td>34</td>
+            <td>PB13</td>
+            <td>I/O</td>
+            <td>PB13</td>
+            <td>SPI2_SCK/<br>USART3_CTS/<br>TIM1_CH1N</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>27</td>
+            <td>27</td>
+            <td>35</td>
+            <td>PB14</td>
+            <td>I/O</td>
+            <td>PB14</td>
+            <td>SPI2_MISO/<br>USART3_RTS/<br>TIM1_CH2N </td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>28</td>
+            <td>28</td>
+            <td>36</td>
+            <td>PB15</td>
+            <td>I/O</td>
+            <td>PB15</td>
+            <td>SPI2_MOSI/<br>TIM1_CH3N</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>-</td>
+            <td>-</td>
+            <td>8</td>
+            <td>PC0</td>
+            <td>I/O/A</td>
+            <td>PC0</td>
+            <td>ADC_IN10</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>-</td>
+            <td>-</td>
+            <td>9</td>
+            <td>PC1</td>
+            <td>I/O/A</td>
+            <td>PC1</td>
+            <td>ADC_IN11</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>-</td>
+            <td>-</td>
+            <td>10</td>
+            <td>PC2</td>
+            <td>I/O/A</td>
+            <td>PC2</td>
+            <td>ADC_IN12</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>-</td>
+            <td>-</td>
+            <td>11</td>
+            <td>PC3</td>
+            <td>I/O/A</td>
+            <td>PC3</td>
+            <td>ADC_IN13</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>-</td>
+            <td>-</td>
+            <td>24</td>
+            <td>PC4</td>
+            <td>I/O/A</td>
+            <td>PC4</td>
+            <td>ADC_IN14</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>-</td>
+            <td>-</td>
+            <td>25</td>
+            <td>PC5</td>
+            <td>I/O/A</td>
+            <td>PC5</td>
+            <td>ADC_IN15</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>-</td>
+            <td>-</td>
+            <td>37</td>
+            <td>PC6</td>
+            <td>I/O</td>
+            <td>PC6</td>
+            <td></td>
+            <td>TIM3_CH1_1</td>
+        </tr>
+        <tr>
+            <td>-</td>
+            <td>-</td>
+            <td>38</td>
+            <td>PC7</td>
+            <td>I/O</td>
+            <td>PC7</td>
+            <td></td>
+            <td>TIM3_CH2_1</td>
+        </tr>
+        <tr>
+            <td>-</td>
+            <td>-</td>
+            <td>39</td>
+            <td>PC8</td>
+            <td>I/O</td>
+            <td>PC8</td>
+            <td></td>
+            <td>TIM3_CH3_1</td>
+        </tr>
+        <tr>
+            <td>-</td>
+            <td>-</td>
+            <td>40</td>
+            <td>PC9</td>
+            <td>I/O</td>
+            <td>PC9</td>
+            <td></td>
+            <td>TIM3_CH4_1</td>
         </tr>
         <tr>
             <td>-</td>
@@ -680,6 +604,36 @@
             <td>USART3_CK_1</td>
         </tr>
         <tr>
+            <td>2</td>
+            <td>2</td>
+            <td>2</td>
+            <td>PC13-TAMPERRTC(3)</td>
+            <td>I/O</td>
+            <td>PC13</td>
+            <td>TAMPER-RTC</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>3</td>
+            <td>3</td>
+            <td>3</td>
+            <td>PC14-OSC32_IN(3)</td>
+            <td>I/O/A</td>
+            <td>PC14</td>
+            <td>OSC32_IN</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>4</td>
+            <td>4</td>
+            <td>4</td>
+            <td>PC15-OSC32_OUT(3)</td>
+            <td>I/O/A</td>
+            <td>PC15</td>
+            <td>OSC32_OUT</td>
+            <td></td>
+        </tr>
+        <tr>
             <td>-</td>
             <td>-</td>
             <td>54</td>
@@ -690,54 +644,124 @@
             <td></td>
         </tr>
         <tr>
-            <td>39</td>
-            <td>39</td>
-            <td>55</td>
-            <td>PB3</td>
-            <td>I/O</td>
-            <td>PB3</td>
+            <td>1</td>
+            <td>1</td>
+            <td>1</td>
+            <td>VBAT</td>
+            <td>P</td>
+            <td>VBAT</td>
             <td></td>
-            <td>TIM2_CH2_1/<br>SPI1_SCK_1</td>
-        </tr>
-        <tr>
-            <td>40</td>
-            <td>40</td>
-            <td>56</td>
-            <td>PB4</td>
-            <td>I/O</td>
-            <td>PB4</td>
             <td></td>
-            <td>TIM3_CH1_1/<br>SPI1_MISO_1</td>
         </tr>
         <tr>
-            <td>41</td>
-            <td>41</td>
-            <td>57</td>
-            <td>PB5</td>
+            <td>5</td>
+            <td>5</td>
+            <td>5</td>
+            <td>OSC_IN</td>
+            <td>I/A</td>
+            <td>OSC_IN</td>
+            <td></td>
+            <td>PD0(4)</td>
+        </tr>
+        <tr>
+            <td>6</td>
+            <td>6</td>
+            <td>6</td>
+            <td>OSC_OUT</td>
+            <td>O/A</td>
+            <td>OSC_OUT</td>
+            <td></td>
+            <td>PD1(4)</td>
+        </tr>
+        <tr>
+            <td>7</td>
+            <td>7</td>
+            <td>7</td>
+            <td>NRST</td>
             <td>I/O</td>
-            <td>PB5</td>
-            <td>I2C1_SMBAI</td>
-            <td>TIM3_CH2_1/<br>SPI1_MOSI_1</td>
+            <td>NRST</td>
+            <td></td>
+            <td></td>
         </tr>
         <tr>
-            <td>42</td>
-            <td>42</td>
-            <td>58</td>
-            <td>PB6</td>
-            <td>I/O/A</td>
-            <td>PB6</td>
-            <td>I2C1_SCL/<br>TIM4_CH1</td>
-            <td>USART1_TX_1</td>
+            <td>8</td>
+            <td>8</td>
+            <td>12</td>
+            <td>VSSA</td>
+            <td>P</td>
+            <td>VSSA</td>
+            <td></td>
+            <td></td>
         </tr>
         <tr>
-            <td>43</td>
-            <td>43</td>
-            <td>59</td>
-            <td>PB7</td>
-            <td>I/O/A</td>
-            <td>PB7</td>
-            <td>I2C1_SDA/<br>TIM4_CH2</td>
-            <td>USART1_RX_1</td>
+            <td>9</td>
+            <td>9</td>
+            <td>13</td>
+            <td>VDDA</td>
+            <td>P</td>
+            <td>VDDA</td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>-</td>
+            <td>-</td>
+            <td>18</td>
+            <td>VSS_4</td>
+            <td>P</td>
+            <td>VSS_4</td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>-</td>
+            <td>-</td>
+            <td>19</td>
+            <td>VDD_4</td>
+            <td>P</td>
+            <td>VDD_4</td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>23</td>
+            <td>23</td>
+            <td>31</td>
+            <td>VSS_1</td>
+            <td>P</td>
+            <td>VSS_1</td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>24</td>
+            <td>24</td>
+            <td>32</td>
+            <td>VDD_1</td>
+            <td>P</td>
+            <td>VDD_1</td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>35</td>
+            <td>35</td>
+            <td>47</td>
+            <td>VSS_2</td>
+            <td>P</td>
+            <td>VSS_2</td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>36</td>
+            <td>36</td>
+            <td>48</td>
+            <td>VDD_2</td>
+            <td>P</td>
+            <td>VDD_2</td>
+            <td></td>
+            <td></td>
         </tr>
         <tr>
             <td>44</td>
@@ -748,26 +772,6 @@
             <td>BOOT0</td>
             <td></td>
             <td></td>
-        </tr>
-        <tr>
-            <td>45</td>
-            <td>45</td>
-            <td>61</td>
-            <td>PB8</td>
-            <td>I/O/A</td>
-            <td>PB8</td>
-            <td>TIM4_CH3</td>
-            <td>I2C1_SCL_1</td>
-        </tr>
-        <tr>
-            <td>46</td>
-            <td>46</td>
-            <td>62</td>
-            <td>PB9</td>
-            <td>I/O/A</td>
-            <td>PB9</td>
-            <td>TIM4_CH4</td>
-            <td>I2C1_SDA_1</td>
         </tr>
         <tr>
             <td>47</td>
