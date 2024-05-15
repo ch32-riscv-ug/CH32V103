@@ -149,10 +149,10 @@
         <tr>
             <th colspan="3"><br>Pin No.</th>
             <th rowspan="2">Pin Name</th>
-            <th rowspan="2">PinType (1)</th>
+            <th rowspan="2">PinType</th>
             <th rowspan="2">Mainfunction (after reset)</th>
             <th rowspan="2">Defaultalternate function</th>
-            <th rowspan="2">Remapping function(2)</th>
+            <th rowspan="2">Remapping function</th>
         </tr>
         <tr>
             <th>LQFP48</th>
@@ -299,7 +299,7 @@
             <td>I/O</td>
             <td>SWDIO</td>
             <td></td>
-            <td>PA13(5)</td>
+            <td>PA13</td>
         </tr>
         <tr>
             <td>37</td>
@@ -309,7 +309,7 @@
             <td>I/O</td>
             <td>SWCLK</td>
             <td></td>
-            <td>PA14(5)</td>
+            <td>PA14</td>
         </tr>
         <tr>
             <td>38</td>
@@ -615,7 +615,7 @@
             <td>2</td>
             <td>2</td>
             <td>2</td>
-            <td>PC13-TAMPERRTC(3)</td>
+            <td>PC13-TAMPERRTC</td>
             <td>I/O</td>
             <td>PC13</td>
             <td>TAMPER-RTC</td>
@@ -625,7 +625,7 @@
             <td>3</td>
             <td>3</td>
             <td>3</td>
-            <td>PC14-OSC32_IN(3)</td>
+            <td>PC14-OSC32_IN</td>
             <td>I/O/A</td>
             <td>PC14</td>
             <td>OSC32_IN</td>
@@ -635,7 +635,7 @@
             <td>4</td>
             <td>4</td>
             <td>4</td>
-            <td>PC15-OSC32_OUT(3)</td>
+            <td>PC15-OSC32_OUT</td>
             <td>I/O/A</td>
             <td>PC15</td>
             <td>OSC32_OUT</td>
@@ -649,7 +649,7 @@
             <td>I/A</td>
             <td>OSC_IN</td>
             <td></td>
-            <td>PD0(4)</td>
+            <td>PD0</td>
         </tr>
         <tr>
             <td>6</td>
@@ -659,7 +659,7 @@
             <td>O/A</td>
             <td>OSC_OUT</td>
             <td></td>
-            <td>PD1(4)</td>
+            <td>PD1</td>
         </tr>
         <tr>
             <td>-</td>
