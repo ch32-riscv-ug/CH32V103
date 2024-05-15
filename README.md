@@ -155,9 +155,9 @@
             <th rowspan="2">Remapping function</th>
         </tr>
         <tr>
-            <th>LQFP48</th>
-            <th>QFN48×7</th>
-            <th>LQFP64M</th>
+            <th>LQFP<br>48</th>
+            <th>QFN<br>48×7</th>
+            <th>LQFP<br>64M</th>
         </tr>
     </thead>
     <tbody align="center">
