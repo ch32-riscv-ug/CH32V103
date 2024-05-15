@@ -319,7 +319,7 @@
             <td>I/O</td>
             <td>PA15</td>
             <td></td>
-            <td>TIM2_CH1_1/<br> TIM2_ETR_1/<br> SPI1_NSS_1</td>
+            <td>TIM2_CH1_1/<br>TIM2_ETR_1/<br>SPI1_NSS_1</td>
         </tr>
         <tr>
             <td>18</td>
