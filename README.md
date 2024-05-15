@@ -642,26 +642,6 @@
             <td></td>
         </tr>
         <tr>
-            <td>-</td>
-            <td>-</td>
-            <td>54</td>
-            <td>PD2</td>
-            <td>I/O</td>
-            <td>PD2</td>
-            <td>TIM3_ETR</td>
-            <td></td>
-        </tr>
-        <tr>
-            <td>1</td>
-            <td>1</td>
-            <td>1</td>
-            <td>VBAT</td>
-            <td>P</td>
-            <td>VBAT</td>
-            <td></td>
-            <td></td>
-        </tr>
-        <tr>
             <td>5</td>
             <td>5</td>
             <td>5</td>
@@ -680,6 +660,26 @@
             <td>OSC_OUT</td>
             <td></td>
             <td>PD1(4)</td>
+        </tr>
+        <tr>
+            <td>-</td>
+            <td>-</td>
+            <td>54</td>
+            <td>PD2</td>
+            <td>I/O</td>
+            <td>PD2</td>
+            <td>TIM3_ETR</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td>1</td>
+            <td>1</td>
+            <td>VBAT</td>
+            <td>P</td>
+            <td>VBAT</td>
+            <td></td>
+            <td></td>
         </tr>
         <tr>
             <td>7</td>
