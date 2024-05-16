@@ -513,7 +513,7 @@
             <td>5</td>
             <td>5</td>
             <td>5</td>
-            <td>OSC_IN</td>
+            <td>OSC_IN<br>(PD0)</td>
             <td>I/A</td>
             <td>OSC_IN</td>
             <td>not available</td>
@@ -523,7 +523,7 @@
             <td>6</td>
             <td>6</td>
             <td>6</td>
-            <td>OSC_OUT</td>
+            <td>OSC_OUT<br>(PD1)</td>
             <td>O/A</td>
             <td>OSC_OUT</td>
             <td>not available</td>
