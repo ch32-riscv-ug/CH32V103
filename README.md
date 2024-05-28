@@ -27,7 +27,7 @@
             <th>CH32V103&#8203;R8T6&#8203;(LQFP64M)</th>
             <th>Pin name</th>
             <th>Pin type</th>
-            <th>Main function&#8203;(after reset)</th>
+            <th>Main function(after reset)</th>
             <th>Note</th>
         </tr>
     </thead>
@@ -487,7 +487,7 @@
             <td>2</td>
             <td>2</td>
             <td>2</td>
-            <td>PC13&#8203;TAMPER RTC</td>
+            <td>PC13 TAMPER RTC</td>
             <td>I/O</td>
             <td>PC13</td>
             <td></td>
@@ -497,7 +497,7 @@
             <td>3</td>
             <td>3</td>
             <td>3</td>
-            <td>PC14&#8203;OSC32_IN</td>
+            <td>PC14 OSC32_IN</td>
             <td>I/O/A</td>
             <td>PC14</td>
             <td></td>
@@ -507,7 +507,7 @@
             <td>4</td>
             <td>4</td>
             <td>4</td>
-            <td>PC15&#8203;OSC32_OUT</td>
+            <td>PC15 OSC32_OUT</td>
             <td>I/O/A</td>
             <td>PC15</td>
             <td></td>
@@ -517,7 +517,7 @@
             <td>5</td>
             <td>5</td>
             <td>5</td>
-            <td>OSC_IN&#8203;(PD0)</td>
+            <td>OSC_IN (PD0)</td>
             <td>I/A</td>
             <td>OSC_IN</td>
             <td>not available</td>
@@ -527,7 +527,7 @@
             <td>6</td>
             <td>6</td>
             <td>6</td>
-            <td>OSC_OUT&#8203;(PD1)</td>
+            <td>OSC_OUT (PD1)</td>
             <td>O/A</td>
             <td>OSC_OUT</td>
             <td>not available</td>
