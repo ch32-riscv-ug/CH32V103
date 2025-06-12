@@ -6,9 +6,9 @@ git pull
 
 cd datasheet_en
 # https://www.wch-ic.com/downloads/CH32V103DS0_PDF.html
-curl -z CH32V103DS0.PDF -o CH32V103DS0.PDF https://www.wch-ic.com/downloads/file/312.html
+curl -z CH32V103DS0.PDF -o CH32V103DS0.PDF https://www.wch-ic.com/download/file?id=312
 # https://www.wch-ic.com/downloads/CH32xRM_PDF.html
-curl -z CH32xRM.PDF -o CH32xRM.PDF https://www.wch-ic.com/downloads/file/306.html
+curl -z CH32xRM.PDF -o CH32xRM.PDF https://www.wch-ic.com/download/file?id=306
 cd ..
 
 cd datasheet_zh
