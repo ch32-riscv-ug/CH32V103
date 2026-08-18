@@ -1,559 +1,195 @@
 # CH32V103
-| SWCLK | SWDIO | TX1 | RX1  | TX2 | RX2 | TX3  | RX3  |
-|-------|-------|-----|------|-----|-----|------|------|
-| PA14  | PA13  | PA9 | PA10 | PA2 | PA3 | PB10 | PB11 |
 
-Pin Alternate Functions
-[[ALL](https://ch32-riscv-ug.github.io/ch32_riscv_tools/PinAlternateFunctions/?chip=CH32V103)]
-[[ADC](https://ch32-riscv-ug.github.io/ch32_riscv_tools/PinAlternateFunctions/?chip=CH32V103&features=ADC)]
-[[I2C](https://ch32-riscv-ug.github.io/ch32_riscv_tools/PinAlternateFunctions/?chip=CH32V103&features=I2C)]
-[[SPI](https://ch32-riscv-ug.github.io/ch32_riscv_tools/PinAlternateFunctions/?chip=CH32V103&features=SPI)]
-[[SYS](https://ch32-riscv-ug.github.io/ch32_riscv_tools/PinAlternateFunctions/?chip=CH32V103&features=SYS)]
-[[TIM](https://ch32-riscv-ug.github.io/ch32_riscv_tools/PinAlternateFunctions/?chip=CH32V103&features=TIM)]
-[[UART/USART](https://ch32-riscv-ug.github.io/ch32_riscv_tools/PinAlternateFunctions/?chip=CH32V103&features=ART)]
-[[USB](https://ch32-riscv-ug.github.io/ch32_riscv_tools/PinAlternateFunctions/?chip=CH32V103&features=USB)]
+<!-- This file is generated from ch32-riscv-ug/ch32-device-data (tables/ + tools/build_readme.py). Edit there, not here. -->
 
-## Official Site
-- https://www.wch-ic.com/products/CH32V103.html
-- https://www.wch.cn/products/CH32V103.html
+## Series
 
-## Datasheet
-- en [[CH32V103DS0.PDF](https://ch32-riscv-ug.github.io/CH32V103/datasheet_en/CH32V103DS0.PDF)] [[CH32xRM.PDF](https://ch32-riscv-ug.github.io/CH32V103/datasheet_en/CH32xRM.PDF)]
-- zh [[CH32V103DS0.PDF](https://ch32-riscv-ug.github.io/CH32V103/datasheet_zh/CH32V103DS0.PDF)] [[CH32xRM.PDF](https://ch32-riscv-ug.github.io/CH32V103/datasheet_zh/CH32xRM.PDF)]
+| Series | Core | ISA | Flash | SRAM | Packages | Products | Official |
+|---|---|---|---|---|---|---|---|
+| **CH32V103** | QingKe V3A | RV32IMAC | - | - | LQFP48,LQFP64M,QFN48X7 | 4 | [en](https://www.wch-ic.com/products/CH32V103.html) / [zh](https://www.wch.cn/products/CH32V103.html) |
 
-## System Block Diagram
+## Debug / serial defaults
+
+| Series | SWDIO | SWCLK | UART TX | UART RX |
+|---|---|---|---|---|
+| CH32V103 | - | - | PA9 | PA10 |
+
+## Documents
+
+| Document | Kind | English | 中文 |
+|---|---|---|---|
+| CH32V103DS0.PDF | datasheet | [page](https://www.wch-ic.com/downloads/CH32V103DS0_PDF.html) [mirror](https://ch32-riscv-ug.github.io/CH32V103/datasheet_en/CH32V103DS0.PDF) v1.2 | [page](https://www.wch.cn/downloads/CH32V103DS0_PDF.html) [mirror](https://ch32-riscv-ug.github.io/CH32V103/datasheet_zh/CH32V103DS0.PDF) v1.2 |
+| CH32xRM.PDF | reference-manual | [page](https://www.wch-ic.com/downloads/CH32xRM_PDF.html) [mirror](https://ch32-riscv-ug.github.io/CH32V103/datasheet_en/CH32xRM.PDF) v2.0 | [page](https://www.wch.cn/downloads/CH32xRM_PDF.html) [mirror](https://ch32-riscv-ug.github.io/CH32V103/datasheet_zh/CH32xRM.PDF) v2.0 |
+| CH32V103EVT.ZIP | evt | - | [page](https://www.wch.cn/downloads/CH32V103EVT_ZIP.html) [mirror](https://github.com/ch32-riscv-ug/CH32V103/tree/main/EVT) v2.7 |
+
+## Product comparison
+
+### CH32V103 product comparison
+
+| | CH32V103&#8203;C6T6&#8203;(LQFP48) | CH32V103&#8203;C8T6&#8203;(LQFP48) | CH32V103&#8203;C8U6&#8203;(QFN48X7) | CH32V103&#8203;R8T6&#8203;(LQFP64M) |
+|---|---|---|---|---|
+| **Flash** | 32K | 64K | 64K | 64K |
+| **SRAM** | 10K | 20K | 20K | 20K |
+| **GPIO** | 37 | 37 | 37 | 51 |
+| **Temperature** | -40..85C | -40..85C | -40..85C | -40..85C |
+| ADC/TKey (Number of channels) | 10 | 10 | 10 | 16 |
+| CommunicationInterface | 1 | 2 | 2 | 2 |
+| CPU clock frequency | Typical: 72MHz | - | - | - |
+| CPU主频 | Typ. 72MHz | - | - | - |
+| 工作电压 | 2.7V～5.5V | - | - | - |
+| Operating voltage | 2.7V~5.5V | - | - | - |
+| Timer | 2 | 3 | 3 | 3 |
+
+## Pin definitions
+
+### CH32V103 pin map
+
+Pin functions (filterable): [ALL](https://ch32-riscv-ug.github.io/ch32-device-data/pins.html?chip=CH32V103) [ADC](https://ch32-riscv-ug.github.io/ch32-device-data/pins.html?chip=CH32V103&features=ADC) [I2C](https://ch32-riscv-ug.github.io/ch32-device-data/pins.html?chip=CH32V103&features=I2C) [SPI](https://ch32-riscv-ug.github.io/ch32-device-data/pins.html?chip=CH32V103&features=SPI) [SYS](https://ch32-riscv-ug.github.io/ch32-device-data/pins.html?chip=CH32V103&features=SYS) [TIM](https://ch32-riscv-ug.github.io/ch32-device-data/pins.html?chip=CH32V103&features=TIM) [UART](https://ch32-riscv-ug.github.io/ch32-device-data/pins.html?chip=CH32V103&features=UART) [USB](https://ch32-riscv-ug.github.io/ch32-device-data/pins.html?chip=CH32V103&features=USB)
+
+| Pin name | Type | [CH32V103&#8203;C6T6](https://ch32-riscv-ug.github.io/ch32-device-data/pins.html?chip=CH32V103C6T6)&#8203;(LQFP48) | [CH32V103&#8203;C8T6](https://ch32-riscv-ug.github.io/ch32-device-data/pins.html?chip=CH32V103C8T6)&#8203;(LQFP48) | [CH32V103&#8203;C8U6](https://ch32-riscv-ug.github.io/ch32-device-data/pins.html?chip=CH32V103C8U6)&#8203;(QFN48X7) | [CH32V103&#8203;R8T6](https://ch32-riscv-ug.github.io/ch32-device-data/pins.html?chip=CH32V103R8T6)&#8203;(LQFP64M) | Notes |
+|---|---|---|---|---|---|---|
+| PA1 | I/O/A | 11 | 11 | 11 | 15 |  |
+| PA2 | I/O/A | 12 | 12 | 12 | 16 |  |
+| PA3 | I/O/A | 13 | 13 | 13 | 17 |  |
+| PA4 | I/O/A | 14 | 14 | 14 | 20 |  |
+| PA5 | I/O/A | 15 | 15 | 15 | 21 |  |
+| PA6 | I/O/A | 16 | 16 | 16 | 22 |  |
+| PA7 | I/O/A | 17 | 17 | 17 | 23 |  |
+| PA8 | I/O | 29 | 29 | 29 | 41 |  |
+| PA9 | I/O | 30 | 30 | 30 | 42 | UART TX |
+| PA10 | I/O | 31 | 31 | 31 | 43 | UART RX |
+| PA11 | I/O/A | 32 | 32 | 32 | 44 |  |
+| PA12 | I/O/A | 33 | 33 | 33 | 45 |  |
+| PA13 | I/O | 34 | 34 | 34 | 46 |  |
+| PA14 | I/O | 37 | 37 | 37 | 49 |  |
+| PA15 | I/O | 38 | 38 | 38 | 50 |  |
+| PB0 | I/O/A | 18 | 18 | 18 | 26 |  |
+| PB1 | I/O/A | 19 | 19 | 19 | 27 |  |
+| PB2 | I/O | 20 | 20 | 20 | 28 |  |
+| PB3 | I/O | 39 | 39 | 39 | 55 |  |
+| PB4 | I/O | 40 | 40 | 40 | 56 |  |
+| PB5 | I/O | 41 | 41 | 41 | 57 |  |
+| PB6 | I/O/A | 42 | 42 | 42 | 58 |  |
+| PB7 | I/O/A | 43 | 43 | 43 | 59 |  |
+| PB8 | I/O/A | 45 | 45 | 45 | 61 |  |
+| PB9 | I/O/A | 46 | 46 | 46 | 62 |  |
+| PB10 | I/O | 21 | 21 | 21 | 29 |  |
+| PB11 | I/O | 22 | 22 | 22 | 30 |  |
+| PB12 | I/O | 25 | 25 | 25 | 33 |  |
+| PB13 | I/O | 26 | 26 | 26 | 34 |  |
+| PB14 | I/O | 27 | 27 | 27 | 35 |  |
+| PB15 | I/O | 28 | 28 | 28 | 36 |  |
+| PC0 | I/O/A | - | - | - | 8 |  |
+| PC1 | I/O/A | - | - | - | 9 |  |
+| PC2 | I/O/A | - | - | - | 10 |  |
+| PC3 | I/O/A | - | - | - | 11 |  |
+| PC4 | I/O/A | - | - | - | 24 |  |
+| PC5 | I/O/A | - | - | - | 25 |  |
+| PC6 | I/O | - | - | - | 37 |  |
+| PC7 | I/O | - | - | - | 38 |  |
+| PC8 | I/O | - | - | - | 39 |  |
+| PC9 | I/O | - | - | - | 40 |  |
+| PC10 | I/O | - | - | - | 51 |  |
+| PC11 | I/O | - | - | - | 52 |  |
+| PC12 | I/O | - | - | - | 53 |  |
+| PD2 | I/O | - | - | - | 54 |  |
+| BOOT0 | I | 44 | 44 | 44 | 60 |  |
+| NRST | I/O | 7 | 7 | 7 | 7 |  |
+| OSC8M_IN | I/A | 5 | - | - | - |  |
+| OSC_IN | I/A | - | 5 | 5 | 5 |  |
+| OSC_OUT | O/A | - | 6 | 6 | 6 |  |
+| PA0-WKUP | I/O/A | 10 | 10 | 10 | 14 |  |
+| VBAT | P | 1 | 1 | 1 | 1 |  |
+| VDDA | P | 9 | 9 | 9 | 13 |  |
+| VDD_1 | P | 24 | 24 | 24 | 32 |  |
+| VDD_2 | P | 36 | 36 | 36 | 48 |  |
+| VDD_3 | P | 48 | 48 | 48 | 64 |  |
+| VDD_4 | P | - | - | - | 19 |  |
+| VSSA | P | 8 | 8 | 8 | 12 |  |
+| VSS_1 | P | 23 | 23 | 23 | 31 |  |
+| VSS_2 | P | 35 | 35 | 35 | 47 |  |
+| VSS_3 | P | 47 | 47 | 47 | 63 |  |
+| VSS_4 | P | - | - | - | 18 |  |
+
+<details><summary><b>CH32V103 alternate functions</b></summary>
+
+| Pad | default | (no route stated) | remap-1 |
+|---|---|---|---|
+| PA1 | ADC_IN1, TIM2_CH2, USART2_RTS | - | - |
+| PA2 | ADC_IN2, TIM2_CH3, USART2_TX | - | - |
+| PA3 | ADC_IN3, TIM2_CH4, USART2_RX | - | - |
+| PA4 | ADC_IN4, SPI1_NSS, USART2_CK | - | - |
+| PA5 | ADC_IN5, SPI1_SCK | - | - |
+| PA6 | ADC_IN6, SPI1_MISO, TIM3_CH1 | - | TIM1_BKIN |
+| PA7 | ADC_IN7, SPI1_MOSI, TIM3_CH2 | - | TIM1_CH1N |
+| PA8 | MCO, TIM1_CH1, USART1_CK | - | - |
+| PA9 | TIM1_CH2, USART1_TX | - | - |
+| PA10 | TIM1_CH3, USART1_RX | - | - |
+| PA11 | TIM1_CH4, USART1_CTS, USBHDM | - | - |
+| PA12 | R, TIM1_ET, TIM1_ETR, USART1_RTS, USBHDP | - | - |
+| PA13 | - | PA13 | - |
+| PA14 | - | PA14 | - |
+| PA15 | - | - | SPI1_NSS, TIM2_CH1, TIM2_ETR |
+| PB0 | ADC_IN8, TIM3_CH3 | - | TIM1_CH2N |
+| PB1 | ADC_IN9, TIM3_CH4 | - | TIM1_CH3N |
+| PB3 | - | - | SPI1_SCK, TIM2_CH2 |
+| PB4 | - | - | SPI1_MISO, TIM3_CH1 |
+| PB5 | I2C1_SMBAI | - | SPI1_MOSI, TIM3_CH2 |
+| PB6 | I2C1_SCL, TIM4_CH1 | - | USART1_TX |
+| PB7 | I2C1_SDA, TIM4_CH2 | - | USART1_RX |
+| PB8 | TIM4_CH3 | - | I2C1_SCL |
+| PB9 | TIM4_CH4 | - | I2C1_SDA |
+| PB10 | I2C2_SCL, USART3_TX | - | TIM2_CH3 |
+| PB11 | I2C2_SDA, USART3_RX | - | TIM2_CH4 |
+| PB12 | I2C2_SMBAI, SPI2_NSS, TIM1_BKIN, USART3_CK | - | - |
+| PB13 | SPI2_SCK, TIM1_CH1N, USART3_CTS | - | - |
+| PB14 | SPI2_MISO, TIM1_CH2N, USART3_RTS | - | - |
+| PB15 | SPI2_MOSI, TIM1_CH3N | - | - |
+| PC0 | ADC_IN10 | - | - |
+| PC1 | ADC_IN11 | - | - |
+| PC2 | ADC_IN12 | - | - |
+| PC3 | ADC_IN13 | - | - |
+| PC4 | ADC_IN14 | - | - |
+| PC5 | ADC_IN15 | - | - |
+| PC6 | - | - | TIM3_CH1 |
+| PC7 | - | - | TIM3_CH2 |
+| PC8 | - | - | TIM3_CH3 |
+| PC9 | - | - | TIM3_CH4 |
+| PC10 | - | - | USART3_TX |
+| PC11 | - | - | USART3_RX |
+| PC12 | - | - | USART3_CK |
+| PD2 | TIM3_ETR | - | - |
+| OSC8M_IN | - | PD0 | - |
+| OSC_IN | - | PD0 | - |
+| OSC_OUT | - | PD1 | - |
+| PA0-WKUP | ADC_IN0, TIM2_CH1, TIM2_ETR, USART2_CTS, WKUP | - | - |
+
+</details>
+
+<details><summary><b>Remap selectors (AFIO)</b></summary>
+
+| Series | Field | Register | Bits | Values | Reset |
+|---|---|---|---|---|---|
+| CH32V103 | I2C1_REMAP | PCFR1 | 1 | 0;1 |  |
+| CH32V103 | SPI1_REMAP | PCFR1 | 0 | 0;1 |  |
+| CH32V103 | TIM1_REMAP | PCFR1 | 6;7 | 0;1 |  |
+| CH32V103 | TIM2_REMAP | PCFR1 | 8;9 | 0;1;2;3 |  |
+| CH32V103 | TIM3_REMAP | PCFR1 | 10;11 | 0;2;3 |  |
+| CH32V103 | USART1_REMAP | PCFR1 | 2 | 0;1 |  |
+| CH32V103 | USART3_REMAP | PCFR1 | 4;5 | 0;1 |  |
+
+</details>
+
+## Diagrams
+
+### system CH32V103
 <img src="image/system_CH32V103.png" />
 
-### CH32V103
+### product CH32V103
 <img src="image/product_CH32V103.jpg" />
 
-## GPIO Definitions
-<table>
-    <thead>
-        <tr>
-            <th>CH32V103&#8203;C6T6&#8203;(LQFP48)</th>
-            <th>CH32V103&#8203;C8T6&#8203;(LQFP48)</th>
-            <th>CH32V103&#8203;C8U6&#8203;(QFN48X7)</th>
-            <th>CH32V103&#8203;R8T6&#8203;(LQFP64M)</th>
-            <th>Pin name</th>
-            <th>Pin type</th>
-            <th>Main function(after reset)</th>
-            <th>Note</th>
-        </tr>
-    </thead>
-    <tbody align="center">
-        <tr>
-            <td>10</td>
-            <td>10</td>
-            <td>10</td>
-            <td>14</td>
-            <td>PA0-WKUP</td>
-            <td>I/O/A</td>
-            <td>PA0</td>
-            <td></td>
-        </tr>
-        <tr>
-            <td>11</td>
-            <td>11</td>
-            <td>11</td>
-            <td>15</td>
-            <td>PA1</td>
-            <td>I/O/A</td>
-            <td>PA1</td>
-            <td></td>
-        </tr>
-        <tr>
-            <td>12</td>
-            <td>12</td>
-            <td>12</td>
-            <td>16</td>
-            <td>PA2</td>
-            <td>I/O/A</td>
-            <td>PA2</td>
-            <td>TX2</td>
-        </tr>
-        <tr>
-            <td>13</td>
-            <td>13</td>
-            <td>13</td>
-            <td>17</td>
-            <td>PA3</td>
-            <td>I/O/A</td>
-            <td>PA3</td>
-            <td>RX2</td>
-        </tr>
-        <tr>
-            <td>14</td>
-            <td>14</td>
-            <td>14</td>
-            <td>20</td>
-            <td>PA4</td>
-            <td>I/O/A</td>
-            <td>PA4</td>
-            <td></td>
-        </tr>
-        <tr>
-            <td>15</td>
-            <td>15</td>
-            <td>15</td>
-            <td>21</td>
-            <td>PA5</td>
-            <td>I/O/A</td>
-            <td>PA5</td>
-            <td></td>
-        </tr>
-        <tr>
-            <td>16</td>
-            <td>16</td>
-            <td>16</td>
-            <td>22</td>
-            <td>PA6</td>
-            <td>I/O/A</td>
-            <td>PA6</td>
-            <td></td>
-        </tr>
-        <tr>
-            <td>17</td>
-            <td>17</td>
-            <td>17</td>
-            <td>23</td>
-            <td>PA7</td>
-            <td>I/O/A</td>
-            <td>PA7</td>
-            <td></td>
-        </tr>
-        <tr>
-            <td>29</td>
-            <td>29</td>
-            <td>29</td>
-            <td>41</td>
-            <td>PA8</td>
-            <td>I/O</td>
-            <td>PA8</td>
-            <td></td>
-        </tr>
-        <tr>
-            <td>30</td>
-            <td>30</td>
-            <td>30</td>
-            <td>42</td>
-            <td>PA9</td>
-            <td>I/O</td>
-            <td>PA9</td>
-            <td>TX1</td>
-        </tr>
-        <tr>
-            <td>31</td>
-            <td>31</td>
-            <td>31</td>
-            <td>43</td>
-            <td>PA10</td>
-            <td>I/O</td>
-            <td>PA10</td>
-            <td>RX1</td>
-        </tr>
-        <tr>
-            <td>32</td>
-            <td>32</td>
-            <td>32</td>
-            <td>44</td>
-            <td>PA11</td>
-            <td>I/O/A</td>
-            <td>PA11</td>
-            <td></td>
-        </tr>
-        <tr>
-            <td>33</td>
-            <td>33</td>
-            <td>33</td>
-            <td>45</td>
-            <td>PA12</td>
-            <td>I/O/A</td>
-            <td>PA12</td>
-            <td></td>
-        </tr>
-        <tr>
-            <td>34</td>
-            <td>34</td>
-            <td>34</td>
-            <td>46</td>
-            <td>PA13</td>
-            <td>I/O</td>
-            <td>SWDIO</td>
-            <td>SWDIO</td>
-        </tr>
-        <tr>
-            <td>37</td>
-            <td>37</td>
-            <td>37</td>
-            <td>49</td>
-            <td>PA14</td>
-            <td>I/O</td>
-            <td>SWCLK</td>
-            <td>SWCLK</td>
-        </tr>
-        <tr>
-            <td>38</td>
-            <td>38</td>
-            <td>38</td>
-            <td>50</td>
-            <td>PA15</td>
-            <td>I/O</td>
-            <td>PA15</td>
-            <td></td>
-        </tr>
-        <tr>
-            <td>18</td>
-            <td>18</td>
-            <td>18</td>
-            <td>26</td>
-            <td>PB0</td>
-            <td>I/O/A</td>
-            <td>PB0</td>
-            <td></td>
-        </tr>
-        <tr>
-            <td>19</td>
-            <td>19</td>
-            <td>19</td>
-            <td>27</td>
-            <td>PB1</td>
-            <td>I/O/A</td>
-            <td>PB1</td>
-            <td></td>
-        </tr>
-        <tr>
-            <td>20</td>
-            <td>20</td>
-            <td>20</td>
-            <td>28</td>
-            <td>PB2</td>
-            <td>I/O</td>
-            <td>PB2/BOOT1</td>
-            <td></td>
-        </tr>
-        <tr>
-            <td>39</td>
-            <td>39</td>
-            <td>39</td>
-            <td>55</td>
-            <td>PB3</td>
-            <td>I/O</td>
-            <td>PB3</td>
-            <td></td>
-        </tr>
-        <tr>
-            <td>40</td>
-            <td>40</td>
-            <td>40</td>
-            <td>56</td>
-            <td>PB4</td>
-            <td>I/O</td>
-            <td>PB4</td>
-            <td></td>
-        </tr>
-        <tr>
-            <td>41</td>
-            <td>41</td>
-            <td>41</td>
-            <td>57</td>
-            <td>PB5</td>
-            <td>I/O</td>
-            <td>PB5</td>
-            <td></td>
-        </tr>
-        <tr>
-            <td>42</td>
-            <td>42</td>
-            <td>42</td>
-            <td>58</td>
-            <td>PB6</td>
-            <td>I/O/A</td>
-            <td>PB6</td>
-            <td></td>
-        </tr>
-        <tr>
-            <td>43</td>
-            <td>43</td>
-            <td>43</td>
-            <td>59</td>
-            <td>PB7</td>
-            <td>I/O/A</td>
-            <td>PB7</td>
-            <td></td>
-        </tr>
-        <tr>
-            <td>45</td>
-            <td>45</td>
-            <td>45</td>
-            <td>61</td>
-            <td>PB8</td>
-            <td>I/O/A</td>
-            <td>PB8</td>
-            <td></td>
-        </tr>
-        <tr>
-            <td>46</td>
-            <td>46</td>
-            <td>46</td>
-            <td>62</td>
-            <td>PB9</td>
-            <td>I/O/A</td>
-            <td>PB9</td>
-            <td></td>
-        </tr>
-        <tr>
-            <td>21</td>
-            <td>21</td>
-            <td>21</td>
-            <td>29</td>
-            <td>PB10</td>
-            <td>I/O</td>
-            <td>PB10</td>
-            <td>TX3</td>
-        </tr>
-        <tr>
-            <td>22</td>
-            <td>22</td>
-            <td>22</td>
-            <td>30</td>
-            <td>PB11</td>
-            <td>I/O</td>
-            <td>PB11</td>
-            <td>RX3</td>
-        </tr>
-        <tr>
-            <td>25</td>
-            <td>25</td>
-            <td>25</td>
-            <td>33</td>
-            <td>PB12</td>
-            <td>I/O</td>
-            <td>PB12</td>
-            <td></td>
-        </tr>
-        <tr>
-            <td>26</td>
-            <td>26</td>
-            <td>26</td>
-            <td>34</td>
-            <td>PB13</td>
-            <td>I/O</td>
-            <td>PB13</td>
-            <td></td>
-        </tr>
-        <tr>
-            <td>27</td>
-            <td>27</td>
-            <td>27</td>
-            <td>35</td>
-            <td>PB14</td>
-            <td>I/O</td>
-            <td>PB14</td>
-            <td></td>
-        </tr>
-        <tr>
-            <td>28</td>
-            <td>28</td>
-            <td>28</td>
-            <td>36</td>
-            <td>PB15</td>
-            <td>I/O</td>
-            <td>PB15</td>
-            <td></td>
-        </tr>
-        <tr>
-            <td>-</td>
-            <td>-</td>
-            <td>-</td>
-            <td>8</td>
-            <td>PC0</td>
-            <td>I/O/A</td>
-            <td>PC0</td>
-            <td></td>
-        </tr>
-        <tr>
-            <td>-</td>
-            <td>-</td>
-            <td>-</td>
-            <td>9</td>
-            <td>PC1</td>
-            <td>I/O/A</td>
-            <td>PC1</td>
-            <td></td>
-        </tr>
-        <tr>
-            <td>-</td>
-            <td>-</td>
-            <td>-</td>
-            <td>10</td>
-            <td>PC2</td>
-            <td>I/O/A</td>
-            <td>PC2</td>
-            <td></td>
-        </tr>
-        <tr>
-            <td>-</td>
-            <td>-</td>
-            <td>-</td>
-            <td>11</td>
-            <td>PC3</td>
-            <td>I/O/A</td>
-            <td>PC3</td>
-            <td></td>
-        </tr>
-        <tr>
-            <td>-</td>
-            <td>-</td>
-            <td>-</td>
-            <td>24</td>
-            <td>PC4</td>
-            <td>I/O/A</td>
-            <td>PC4</td>
-            <td></td>
-        </tr>
-        <tr>
-            <td>-</td>
-            <td>-</td>
-            <td>-</td>
-            <td>25</td>
-            <td>PC5</td>
-            <td>I/O/A</td>
-            <td>PC5</td>
-            <td></td>
-        </tr>
-        <tr>
-            <td>-</td>
-            <td>-</td>
-            <td>-</td>
-            <td>37</td>
-            <td>PC6</td>
-            <td>I/O</td>
-            <td>PC6</td>
-            <td></td>
-        </tr>
-        <tr>
-            <td>-</td>
-            <td>-</td>
-            <td>-</td>
-            <td>38</td>
-            <td>PC7</td>
-            <td>I/O</td>
-            <td>PC7</td>
-            <td></td>
-        </tr>
-        <tr>
-            <td>-</td>
-            <td>-</td>
-            <td>-</td>
-            <td>39</td>
-            <td>PC8</td>
-            <td>I/O</td>
-            <td>PC8</td>
-            <td></td>
-        </tr>
-        <tr>
-            <td>-</td>
-            <td>-</td>
-            <td>-</td>
-            <td>40</td>
-            <td>PC9</td>
-            <td>I/O</td>
-            <td>PC9</td>
-            <td></td>
-        </tr>
-        <tr>
-            <td>-</td>
-            <td>-</td>
-            <td>-</td>
-            <td>51</td>
-            <td>PC10</td>
-            <td>I/O</td>
-            <td>PC10</td>
-            <td></td>
-        </tr>
-        <tr>
-            <td>-</td>
-            <td>-</td>
-            <td>-</td>
-            <td>52</td>
-            <td>PC11</td>
-            <td>I/O</td>
-            <td>PC11</td>
-            <td></td>
-        </tr>
-        <tr>
-            <td>-</td>
-            <td>-</td>
-            <td>-</td>
-            <td>53</td>
-            <td>PC12</td>
-            <td>I/O</td>
-            <td>PC12</td>
-            <td></td>
-        </tr>
-        <tr>
-            <td>2</td>
-            <td>2</td>
-            <td>2</td>
-            <td>2</td>
-            <td>PC13 TAMPER RTC</td>
-            <td>I/O</td>
-            <td>PC13</td>
-            <td></td>
-        </tr>
-        <tr>
-            <td>3</td>
-            <td>3</td>
-            <td>3</td>
-            <td>3</td>
-            <td>PC14 OSC32_IN</td>
-            <td>I/O/A</td>
-            <td>PC14</td>
-            <td></td>
-        </tr>
-        <tr>
-            <td>4</td>
-            <td>4</td>
-            <td>4</td>
-            <td>4</td>
-            <td>PC15 OSC32_OUT</td>
-            <td>I/O/A</td>
-            <td>PC15</td>
-            <td></td>
-        </tr>
-        <tr>
-            <td>5</td>
-            <td>5</td>
-            <td>5</td>
-            <td>5</td>
-            <td>OSC_IN (PD0)</td>
-            <td>I/A</td>
-            <td>OSC_IN</td>
-            <td>not available</td>
-        </tr>
-        <tr>
-            <td>6</td>
-            <td>6</td>
-            <td>6</td>
-            <td>6</td>
-            <td>OSC_OUT (PD1)</td>
-            <td>O/A</td>
-            <td>OSC_OUT</td>
-            <td>not available</td>
-        </tr>
-        <tr>
-            <td>-</td>
-            <td>-</td>
-            <td>-</td>
-            <td>54</td>
-            <td>PD2</td>
-            <td>I/O</td>
-            <td>PD2</td>
-            <td></td>
-        </tr>
-    </tbody>
-</table>
-
-## System Architecture
+### architecture CH32V103
 <img src="image/architecture_CH32V103.png" />
+
+---
+Data: [ch32-device-data](https://github.com/ch32-riscv-ug/ch32-device-data) (tables/ -- each value carries its evidence and confidence there).
