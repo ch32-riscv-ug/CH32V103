@@ -4,7 +4,7 @@
 
 ## Series
 
-| Series | Core | ISA | Flash | SRAM | Max clock | VDD | Packages | Products | Official |
+| Series | Core | ISA | Flash | SRAM | Clock | VDD | Packages | Products | Official |
 |---|---|---|---|---|---|---|---|---|---|
 | **CH32V103** | QingKe V3A | RV32IMAC | - | - | 80 MHz | 2.7-5.5V | LQFP48,LQFP64M,QFN48X7 | 4 | [en](https://www.wch-ic.com/products/CH32V103.html) / [zh](https://www.wch.cn/products/CH32V103.html) |
 
@@ -21,6 +21,17 @@
 | CH32V103DS0.PDF | datasheet | [page](https://www.wch-ic.com/downloads/CH32V103DS0_PDF.html) [mirror](https://ch32-riscv-ug.github.io/CH32V103/datasheet_en/CH32V103DS0.PDF) v1.2 | [page](https://www.wch.cn/downloads/CH32V103DS0_PDF.html) [mirror](https://ch32-riscv-ug.github.io/CH32V103/datasheet_zh/CH32V103DS0.PDF) v1.2 |
 | CH32xRM.PDF | reference-manual | [page](https://www.wch-ic.com/downloads/CH32xRM_PDF.html) [mirror](https://ch32-riscv-ug.github.io/CH32V103/datasheet_en/CH32xRM.PDF) v2.0 | [page](https://www.wch.cn/downloads/CH32xRM_PDF.html) [mirror](https://ch32-riscv-ug.github.io/CH32V103/datasheet_zh/CH32xRM.PDF) v2.0 |
 | CH32V103EVT.ZIP | evt | - | [page](https://www.wch.cn/downloads/CH32V103EVT_ZIP.html) [mirror](https://github.com/ch32-riscv-ug/CH32V103/tree/main/EVT) v2.7 |
+
+## Pinouts
+
+Pinout drawings are in the datasheet (chapter *Pinouts*):
+
+| Package | Products | Datasheet | Outline |
+|---|---|---|---|
+| LQFP48 | CH32V103C6T6 | [en](https://ch32-riscv-ug.github.io/CH32V103/datasheet_en/CH32V103DS0.PDF) / [zh](https://ch32-riscv-ug.github.io/CH32V103/datasheet_zh/CH32V103DS0.PDF) | [drawing](https://raw.githubusercontent.com/ch32-riscv-ug/WCH-common/main/image/package_LQFP48.png) |
+| LQFP48 | CH32V103C8T6 | [en](https://ch32-riscv-ug.github.io/CH32V103/datasheet_en/CH32V103DS0.PDF) / [zh](https://ch32-riscv-ug.github.io/CH32V103/datasheet_zh/CH32V103DS0.PDF) | [drawing](https://raw.githubusercontent.com/ch32-riscv-ug/WCH-common/main/image/package_LQFP48.png) |
+| QFN48X7 | CH32V103C8U6 | [en](https://ch32-riscv-ug.github.io/CH32V103/datasheet_en/CH32V103DS0.PDF) / [zh](https://ch32-riscv-ug.github.io/CH32V103/datasheet_zh/CH32V103DS0.PDF) | [drawing](https://raw.githubusercontent.com/ch32-riscv-ug/WCH-common/main/image/package_QFN48X7.png) |
+| LQFP64M | CH32V103R8T6 | [en](https://ch32-riscv-ug.github.io/CH32V103/datasheet_en/CH32V103DS0.PDF) / [zh](https://ch32-riscv-ug.github.io/CH32V103/datasheet_zh/CH32V103DS0.PDF) | [drawing](https://raw.githubusercontent.com/ch32-riscv-ug/WCH-common/main/image/package_LQFP64M.png) |
 
 ## Product comparison
 
@@ -170,26 +181,28 @@ Pin functions (filterable): [ALL](https://ch32-riscv-ug.github.io/ch32-device-da
 
 | Series | Field | Register | Bits | Values | Reset |
 |---|---|---|---|---|---|
-| CH32V103 | I2C1_REMAP | PCFR1 | 1 | 0;1 |  |
-| CH32V103 | SPI1_REMAP | PCFR1 | 0 | 0;1 |  |
-| CH32V103 | TIM1_REMAP | PCFR1 | 6;7 | 0;1 |  |
-| CH32V103 | TIM2_REMAP | PCFR1 | 8;9 | 0;1;2;3 |  |
-| CH32V103 | TIM3_REMAP | PCFR1 | 10;11 | 0;2;3 |  |
-| CH32V103 | USART1_REMAP | PCFR1 | 2 | 0;1 |  |
-| CH32V103 | USART3_REMAP | PCFR1 | 4;5 | 0;1 |  |
+| CH32V103 | I2C1_REMAP | PCFR1 | PCFR1:1 | 0;1 |  |
+| CH32V103 | SPI1_REMAP | PCFR1 | PCFR1:0 | 0;1 |  |
+| CH32V103 | TIM1_REMAP | PCFR1 | PCFR1:6;PCFR1:7 | 0;1;3 |  |
+| CH32V103 | TIM2_REMAP | PCFR1 | PCFR1:8;PCFR1:9 | 0;1;2;3 |  |
+| CH32V103 | TIM3_REMAP | PCFR1 | PCFR1:10;PCFR1:11 | 0;1;2;3 |  |
+| CH32V103 | TIM4_REMAP | PCFR1 | PCFR1:12 | 0 |  |
+| CH32V103 | USART1_REMAP | PCFR1 | PCFR1:2 | 0;1 |  |
+| CH32V103 | USART2_REMAP | PCFR1 | PCFR1:3 | 0 |  |
+| CH32V103 | USART3_REMAP | PCFR1 | PCFR1:4;PCFR1:5 | 0;1;3 |  |
 
 </details>
 
-## Diagrams
+## Block diagrams
 
-### system CH32V103
-<img src="image/system_CH32V103.png" />
+### CH32V103
+<img src="image/architecture_CH32V103.png" alt="CH32V103 block diagram" />
 
-### product CH32V103
-<img src="image/product_CH32V103.jpg" />
+## EVT examples
 
-### architecture CH32V103
-<img src="image/architecture_CH32V103.png" />
+93 routines in [EVT/EXAM](https://github.com/ch32-riscv-ug/CH32V103/tree/main/EVT/EXAM):
+
+[ADC](https://github.com/ch32-riscv-ug/CH32V103/tree/main/EVT/EXAM/ADC) 9 · [APPLICATION](https://github.com/ch32-riscv-ug/CH32V103/tree/main/EVT/EXAM/APPLICATION) 2 · [BKP](https://github.com/ch32-riscv-ug/CH32V103/tree/main/EVT/EXAM/BKP) 1 · [CRC](https://github.com/ch32-riscv-ug/CH32V103/tree/main/EVT/EXAM/CRC) 1 · [DMA](https://github.com/ch32-riscv-ug/CH32V103/tree/main/EVT/EXAM/DMA) 2 · [EXTI](https://github.com/ch32-riscv-ug/CH32V103/tree/main/EVT/EXAM/EXTI) 1 · [FLASH](https://github.com/ch32-riscv-ug/CH32V103/tree/main/EVT/EXAM/FLASH) 1 · [FreeRTOS](https://github.com/ch32-riscv-ug/CH32V103/tree/main/EVT/EXAM/FreeRTOS) 1 · [GPIO](https://github.com/ch32-riscv-ug/CH32V103/tree/main/EVT/EXAM/GPIO) 1 · [HarmonyOS](https://github.com/ch32-riscv-ug/CH32V103/tree/main/EVT/EXAM/HarmonyOS) 1 · [I2C](https://github.com/ch32-riscv-ug/CH32V103/tree/main/EVT/EXAM/I2C) 6 · [IAP](https://github.com/ch32-riscv-ug/CH32V103/tree/main/EVT/EXAM/IAP) 1 · [IWDG](https://github.com/ch32-riscv-ug/CH32V103/tree/main/EVT/EXAM/IWDG) 1 · [PWR](https://github.com/ch32-riscv-ug/CH32V103/tree/main/EVT/EXAM/PWR) 5 · [RCC](https://github.com/ch32-riscv-ug/CH32V103/tree/main/EVT/EXAM/RCC) 5 · [RT-Thread](https://github.com/ch32-riscv-ug/CH32V103/tree/main/EVT/EXAM/RT-Thread) 1 · [RTC](https://github.com/ch32-riscv-ug/CH32V103/tree/main/EVT/EXAM/RTC) 2 · [SPI](https://github.com/ch32-riscv-ug/CH32V103/tree/main/EVT/EXAM/SPI) 7 · [SYSTICK](https://github.com/ch32-riscv-ug/CH32V103/tree/main/EVT/EXAM/SYSTICK) 1 · [TIM](https://github.com/ch32-riscv-ug/CH32V103/tree/main/EVT/EXAM/TIM) 16 · [TOUCHKEY](https://github.com/ch32-riscv-ug/CH32V103/tree/main/EVT/EXAM/TOUCHKEY) 1 · [TencentOS](https://github.com/ch32-riscv-ug/CH32V103/tree/main/EVT/EXAM/TencentOS) 1 · [USART](https://github.com/ch32-riscv-ug/CH32V103/tree/main/EVT/EXAM/USART) 9 · [USB](https://github.com/ch32-riscv-ug/CH32V103/tree/main/EVT/EXAM/USB) 16 · [WWDG](https://github.com/ch32-riscv-ug/CH32V103/tree/main/EVT/EXAM/WWDG) 1
 
 ---
 Data: [ch32-device-data](https://github.com/ch32-riscv-ug/ch32-device-data) (tables/ -- each value carries its evidence and confidence there).
