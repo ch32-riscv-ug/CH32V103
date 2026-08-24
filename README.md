@@ -2,25 +2,43 @@
 
 <!-- This file is generated from ch32-riscv-ug/ch32-device-data (tables/ + tools/build_readme.py). Edit there, not here. -->
 
+## Quick start
+
+Programming and debug: **2-wire SDI** (WCH-Link, `Serial Debug Interface`).
+
+### Debug / serial defaults
+
+| Series | SWDIO | SWCLK | UART TX | UART RX |
+|---|---|---|---|---|
+| CH32V103 | PA13 | PA14 | PA9 (USART1); PA2 (USART2) | PA10 (USART1); PA3 (USART2) |
+
 ## Series
 
 | Series | Core | ISA | Flash | SRAM | Clock | VDD | Packages | Products | Official |
 |---|---|---|---|---|---|---|---|---|---|
 | **CH32V103** | QingKe V3A | RV32IMAC | - | - | 80 MHz | 2.7-5.5V | LQFP48,LQFP64M,QFN48X7 | 4 | [en](https://www.wch-ic.com/products/CH32V103.html) / [zh](https://www.wch.cn/products/CH32V103.html) |
 
-## Debug / serial defaults
+## Product comparison
 
-| Series | SWDIO | SWCLK | UART TX | UART RX |
+### CH32V103 product comparison
+
+| | CH32V103&#8203;C6T6&#8203;(LQFP48) | CH32V103&#8203;C8T6&#8203;(LQFP48) | CH32V103&#8203;C8U6&#8203;(QFN48X7) | CH32V103&#8203;R8T6&#8203;(LQFP64M) |
 |---|---|---|---|---|
-| CH32V103 | - | - | PA9 | PA10 |
-
-## Documents
-
-| Document | Kind | English | 中文 |
-|---|---|---|---|
-| CH32V103DS0.PDF | datasheet | [page](https://www.wch-ic.com/downloads/CH32V103DS0_PDF.html) [mirror](https://ch32-riscv-ug.github.io/CH32V103/datasheet_en/CH32V103DS0.PDF) v1.2 | [page](https://www.wch.cn/downloads/CH32V103DS0_PDF.html) [mirror](https://ch32-riscv-ug.github.io/CH32V103/datasheet_zh/CH32V103DS0.PDF) v1.2 |
-| CH32xRM.PDF | reference-manual | [page](https://www.wch-ic.com/downloads/CH32xRM_PDF.html) [mirror](https://ch32-riscv-ug.github.io/CH32V103/datasheet_en/CH32xRM.PDF) v2.0 | [page](https://www.wch.cn/downloads/CH32xRM_PDF.html) [mirror](https://ch32-riscv-ug.github.io/CH32V103/datasheet_zh/CH32xRM.PDF) v2.0 |
-| CH32V103EVT.ZIP | evt | - | [page](https://www.wch.cn/downloads/CH32V103EVT_ZIP.html) [mirror](https://github.com/ch32-riscv-ug/CH32V103/tree/main/EVT) v2.7 |
+| **Flash** | 32K | 64K | 64K | 64K |
+| **SRAM** | 10K | 20K | 20K | 20K |
+| **GPIO** | 37 | 37 | 37 | 51 |
+| **Temperature** | -40..85C | -40..85C | -40..85C | -40..85C |
+| Timer General-purpose | 2 | 3 | 3 | 3 |
+| Timer Advanced | 1 | 1 | 1 | 1 |
+| Watchdog (WDT) | 2 | 2 | 2 | 2 |
+| Timer SysTick | 1 | 1 | 1 | 1 |
+| ADC/TKey (Number of channels) | 10 | 10 | 10 | 16 |
+| SPI | 1 | 2 | 2 | 2 |
+| I2C | 1 | 2 | 2 | 2 |
+| USART | 2 | 3 | 3 | 3 |
+| USBHD 2.0FS | 1 | 1 | 1 | 1 |
+| CPU clock frequency | Typical: 72MHz | Typical: 72MHz | Typical: 72MHz | Typical: 72MHz |
+| Operating voltage | 2.7V~5.5V | 2.7V~5.5V | 2.7V~5.5V | 2.7V~5.5V |
 
 ## Pinouts
 
@@ -33,24 +51,6 @@ Pinout drawings are in the datasheet (chapter *Pinouts*):
 | QFN48X7 | CH32V103C8U6 | [en](https://ch32-riscv-ug.github.io/CH32V103/datasheet_en/CH32V103DS0.PDF) / [zh](https://ch32-riscv-ug.github.io/CH32V103/datasheet_zh/CH32V103DS0.PDF) | [drawing](https://raw.githubusercontent.com/ch32-riscv-ug/WCH-common/main/image/package_QFN48X7.png) |
 | LQFP64M | CH32V103R8T6 | [en](https://ch32-riscv-ug.github.io/CH32V103/datasheet_en/CH32V103DS0.PDF) / [zh](https://ch32-riscv-ug.github.io/CH32V103/datasheet_zh/CH32V103DS0.PDF) | [drawing](https://raw.githubusercontent.com/ch32-riscv-ug/WCH-common/main/image/package_LQFP64M.png) |
 
-## Product comparison
-
-### CH32V103 product comparison
-
-| | CH32V103&#8203;C6T6&#8203;(LQFP48) | CH32V103&#8203;C8T6&#8203;(LQFP48) | CH32V103&#8203;C8U6&#8203;(QFN48X7) | CH32V103&#8203;R8T6&#8203;(LQFP64M) |
-|---|---|---|---|---|
-| **Flash** | 32K | 64K | 64K | 64K |
-| **SRAM** | 10K | 20K | 20K | 20K |
-| **GPIO** | 37 | 37 | 37 | 51 |
-| **Temperature** | -40..85C | -40..85C | -40..85C | -40..85C |
-| ADC/TKey (Number of channels) | 10 | 10 | 10 | 16 |
-| CommunicationInterface | 1 | 2 | 2 | 2 |
-| CPU clock frequency | Typical: 72MHz | - | - | - |
-| CPU主频 | Typ. 72MHz | - | - | - |
-| 工作电压 | 2.7V～5.5V | - | - | - |
-| Operating voltage | 2.7V~5.5V | - | - | - |
-| Timer | 2 | 3 | 3 | 3 |
-
 ## Pin definitions
 
 ### CH32V103 pin map
@@ -60,19 +60,19 @@ Pin functions (filterable): [ALL](https://ch32-riscv-ug.github.io/ch32-device-da
 | Pin name | Type | [CH32V103&#8203;C6T6](https://ch32-riscv-ug.github.io/ch32-device-data/pins.html?chip=CH32V103C6T6)&#8203;(LQFP48) | [CH32V103&#8203;C8T6](https://ch32-riscv-ug.github.io/ch32-device-data/pins.html?chip=CH32V103C8T6)&#8203;(LQFP48) | [CH32V103&#8203;C8U6](https://ch32-riscv-ug.github.io/ch32-device-data/pins.html?chip=CH32V103C8U6)&#8203;(QFN48X7) | [CH32V103&#8203;R8T6](https://ch32-riscv-ug.github.io/ch32-device-data/pins.html?chip=CH32V103R8T6)&#8203;(LQFP64M) | Notes |
 |---|---|---|---|---|---|---|
 | PA1 | I/O/A | 11 | 11 | 11 | 15 |  |
-| PA2 | I/O/A | 12 | 12 | 12 | 16 |  |
-| PA3 | I/O/A | 13 | 13 | 13 | 17 |  |
+| PA2 | I/O/A | 12 | 12 | 12 | 16 | UART TX (USART2) |
+| PA3 | I/O/A | 13 | 13 | 13 | 17 | UART RX (USART2) |
 | PA4 | I/O/A | 14 | 14 | 14 | 20 |  |
 | PA5 | I/O/A | 15 | 15 | 15 | 21 |  |
 | PA6 | I/O/A | 16 | 16 | 16 | 22 |  |
 | PA7 | I/O/A | 17 | 17 | 17 | 23 |  |
 | PA8 | I/O | 29 | 29 | 29 | 41 |  |
-| PA9 | I/O | 30 | 30 | 30 | 42 | UART TX |
-| PA10 | I/O | 31 | 31 | 31 | 43 | UART RX |
+| PA9 | I/O | 30 | 30 | 30 | 42 | UART TX (USART1) |
+| PA10 | I/O | 31 | 31 | 31 | 43 | UART RX (USART1) |
 | PA11 | I/O/A | 32 | 32 | 32 | 44 |  |
 | PA12 | I/O/A | 33 | 33 | 33 | 45 |  |
-| PA13 | I/O | 34 | 34 | 34 | 46 |  |
-| PA14 | I/O | 37 | 37 | 37 | 49 |  |
+| PA13 | I/O | 34 | 34 | 34 | 46 | SWDIO |
+| PA14 | I/O | 37 | 37 | 37 | 49 | SWCLK |
 | PA15 | I/O | 38 | 38 | 38 | 50 |  |
 | PB0 | I/O/A | 18 | 18 | 18 | 26 |  |
 | PB1 | I/O/A | 19 | 19 | 19 | 27 |  |
@@ -110,6 +110,9 @@ Pin functions (filterable): [ALL](https://ch32-riscv-ug.github.io/ch32-device-da
 | OSC_IN | I/A | - | 5 | 5 | 5 |  |
 | OSC_OUT | O/A | - | 6 | 6 | 6 |  |
 | PA0-WKUP | I/O/A | 10 | 10 | 10 | 14 |  |
+| PC13-TAMPER-RTC | I/O | 2 | 2 | 2 | 2 |  |
+| PC14-OSC32_IN | I/O/A | 3 | 3 | 3 | 3 | OSC |
+| PC15-OSC32_OUT | I/O/A | 4 | 4 | 4 | 4 | OSC |
 | VBAT | P | 1 | 1 | 1 | 1 |  |
 | VDDA | P | 9 | 9 | 9 | 13 |  |
 | VDD_1 | P | 24 | 24 | 24 | 32 |  |
@@ -137,7 +140,7 @@ Pin functions (filterable): [ALL](https://ch32-riscv-ug.github.io/ch32-device-da
 | PA9 | TIM1_CH2, USART1_TX | - | - |
 | PA10 | TIM1_CH3, USART1_RX | - | - |
 | PA11 | TIM1_CH4, USART1_CTS, USBHDM | - | - |
-| PA12 | R, TIM1_ET, TIM1_ETR, USART1_RTS, USBHDP | - | - |
+| PA12 | TIM1_ETR, USART1_RTS, USBHDP | - | - |
 | PA13 | - | PA13 | - |
 | PA14 | - | PA14 | - |
 | PA15 | - | - | SPI1_NSS, TIM2_CH1, TIM2_ETR |
@@ -174,6 +177,9 @@ Pin functions (filterable): [ALL](https://ch32-riscv-ug.github.io/ch32-device-da
 | OSC_IN | - | PD0 | - |
 | OSC_OUT | - | PD1 | - |
 | PA0-WKUP | ADC_IN0, TIM2_CH1, TIM2_ETR, USART2_CTS, WKUP | - | - |
+| PC13-TAMPER-RTC | TAMPER-RTC | - | - |
+| PC14-OSC32_IN | OSC32_IN | - | - |
+| PC15-OSC32_OUT | OSC32_OUT | - | - |
 
 </details>
 
@@ -203,6 +209,42 @@ Pin functions (filterable): [ALL](https://ch32-riscv-ug.github.io/ch32-device-da
 93 routines in [EVT/EXAM](https://github.com/ch32-riscv-ug/CH32V103/tree/main/EVT/EXAM):
 
 [ADC](https://github.com/ch32-riscv-ug/CH32V103/tree/main/EVT/EXAM/ADC) 9 · [APPLICATION](https://github.com/ch32-riscv-ug/CH32V103/tree/main/EVT/EXAM/APPLICATION) 2 · [BKP](https://github.com/ch32-riscv-ug/CH32V103/tree/main/EVT/EXAM/BKP) 1 · [CRC](https://github.com/ch32-riscv-ug/CH32V103/tree/main/EVT/EXAM/CRC) 1 · [DMA](https://github.com/ch32-riscv-ug/CH32V103/tree/main/EVT/EXAM/DMA) 2 · [EXTI](https://github.com/ch32-riscv-ug/CH32V103/tree/main/EVT/EXAM/EXTI) 1 · [FLASH](https://github.com/ch32-riscv-ug/CH32V103/tree/main/EVT/EXAM/FLASH) 1 · [FreeRTOS](https://github.com/ch32-riscv-ug/CH32V103/tree/main/EVT/EXAM/FreeRTOS) 1 · [GPIO](https://github.com/ch32-riscv-ug/CH32V103/tree/main/EVT/EXAM/GPIO) 1 · [HarmonyOS](https://github.com/ch32-riscv-ug/CH32V103/tree/main/EVT/EXAM/HarmonyOS) 1 · [I2C](https://github.com/ch32-riscv-ug/CH32V103/tree/main/EVT/EXAM/I2C) 6 · [IAP](https://github.com/ch32-riscv-ug/CH32V103/tree/main/EVT/EXAM/IAP) 1 · [IWDG](https://github.com/ch32-riscv-ug/CH32V103/tree/main/EVT/EXAM/IWDG) 1 · [PWR](https://github.com/ch32-riscv-ug/CH32V103/tree/main/EVT/EXAM/PWR) 5 · [RCC](https://github.com/ch32-riscv-ug/CH32V103/tree/main/EVT/EXAM/RCC) 5 · [RT-Thread](https://github.com/ch32-riscv-ug/CH32V103/tree/main/EVT/EXAM/RT-Thread) 1 · [RTC](https://github.com/ch32-riscv-ug/CH32V103/tree/main/EVT/EXAM/RTC) 2 · [SPI](https://github.com/ch32-riscv-ug/CH32V103/tree/main/EVT/EXAM/SPI) 7 · [SYSTICK](https://github.com/ch32-riscv-ug/CH32V103/tree/main/EVT/EXAM/SYSTICK) 1 · [TIM](https://github.com/ch32-riscv-ug/CH32V103/tree/main/EVT/EXAM/TIM) 16 · [TOUCHKEY](https://github.com/ch32-riscv-ug/CH32V103/tree/main/EVT/EXAM/TOUCHKEY) 1 · [TencentOS](https://github.com/ch32-riscv-ug/CH32V103/tree/main/EVT/EXAM/TencentOS) 1 · [USART](https://github.com/ch32-riscv-ug/CH32V103/tree/main/EVT/EXAM/USART) 9 · [USB](https://github.com/ch32-riscv-ug/CH32V103/tree/main/EVT/EXAM/USB) 16 · [WWDG](https://github.com/ch32-riscv-ug/CH32V103/tree/main/EVT/EXAM/WWDG) 1
+
+## Documents
+
+| Document | Kind | English | 中文 |
+|---|---|---|---|
+| CH32V103DS0.PDF | datasheet | [page](https://www.wch-ic.com/downloads/CH32V103DS0_PDF.html) [mirror](https://ch32-riscv-ug.github.io/CH32V103/datasheet_en/CH32V103DS0.PDF) v1.2 | [page](https://www.wch.cn/downloads/CH32V103DS0_PDF.html) [mirror](https://ch32-riscv-ug.github.io/CH32V103/datasheet_zh/CH32V103DS0.PDF) v1.2 |
+| CH32xRM.PDF | reference-manual | [page](https://www.wch-ic.com/downloads/CH32xRM_PDF.html) [mirror](https://ch32-riscv-ug.github.io/CH32V103/datasheet_en/CH32xRM.PDF) v2.0 | [page](https://www.wch.cn/downloads/CH32xRM_PDF.html) [mirror](https://ch32-riscv-ug.github.io/CH32V103/datasheet_zh/CH32xRM.PDF) v2.0 |
+| CH32V103EVT.ZIP | evt | - | [page](https://www.wch.cn/downloads/CH32V103EVT_ZIP.html) [mirror](https://github.com/ch32-riscv-ug/CH32V103/tree/main/EVT) v2.7 |
+
+### Evaluation boards
+
+- board-manual:en: [CH32V103 Evaluation Board Reference-EN.pdf](https://github.com/ch32-riscv-ug/CH32V103/blob/main/EVT/PUB/CH32V103%20Evaluation%20Board%20Reference-EN.pdf)
+- board-manual:zh: [CH32V103评估板说明书.pdf](https://github.com/ch32-riscv-ug/CH32V103/blob/main/EVT/PUB/CH32V103%E8%AF%84%E4%BC%B0%E6%9D%BF%E8%AF%B4%E6%98%8E%E4%B9%A6.pdf)
+- schematic-pdf: [CH32V103SCH.pdf](https://github.com/ch32-riscv-ug/CH32V103/blob/main/EVT/PUB/CH32V103SCH.pdf)
+
+4 board schematics under `EVT/PUB/SCHPCB/`: `CH32V103C_R0`, `CH32V103C_R1`, `CH32V103R_R0`, `CH32V103R_R1`
+
+## Reference
+
+### Address map
+
+| Region | Base | Kind |
+|---|---|---|
+| APB1PERIPH | `0x40000000` | bus |
+| PERIPH | `0x40000000` | bus |
+| APB2PERIPH | `0x40010000` | bus |
+| AHBPERIPH | `0x40020000` | bus |
+| FLASH | `0x00000000` | link-origin |
+| RAM | `0x20000000` | link-origin |
+| FLASH | `0x08000000` | memory |
+| OB | `0x1ffff800` | memory |
+| SRAM | `0x20000000` | memory |
+
+`link-origin` is what the EVT linker scripts use; the `memory` row for FLASH is the address the device header states. Both windows are real -- CH32V307 answers at `0x08000000` and at `0x00000000`.
+
+Peripheral base addresses are in [memory_map.csv](https://github.com/ch32-riscv-ug/ch32-device-data/blob/main/tables/memory_map.csv); interrupt numbers in [interrupts.csv](https://github.com/ch32-riscv-ug/ch32-device-data/blob/main/tables/interrupts.csv).
 
 ---
 Data: [ch32-device-data](https://github.com/ch32-riscv-ug/ch32-device-data) (tables/ -- each value carries its evidence and confidence there).
