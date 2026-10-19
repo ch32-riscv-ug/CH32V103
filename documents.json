@@ -42,7 +42,7 @@
       "sources": {
         "zh": {
           "file_id": 326,
-          "version": "2.7",
+          "version": "2.8",
           "scope": " CH32V103C6T6, CH32V103C8T6, CH32V103C8U6, CH32V103R8T6"
         }
       }
